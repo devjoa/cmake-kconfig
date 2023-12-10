@@ -1,0 +1,23 @@
+mainmenu "Project Configuration"
+
+config TEST_OPTION
+	bool "Test Option"
+	help
+	  Test option description
+
+config TEST_STRING
+	string "Write something interresting"
+	help
+	  This is something intresting
+   
+
+
+
+
+config FOO
+	tristate "foo"
+	imply BAZ
+
+config BAZ
+	tristate "baz"
+	depends on TEST_OPTION
